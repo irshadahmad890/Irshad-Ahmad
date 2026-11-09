@@ -200,36 +200,54 @@ section {
     overflow: hidden;
     background:
         radial-gradient(
-            circle at 75% 40%,
-            rgba(0, 217, 255, 0.10),
-            transparent 32%
+            ellipse at 72% 42%,
+            rgba(0, 184, 217, 0.12),
+            transparent 42%
         ),
-        linear-gradient(
-            135deg,
-            var(--bg-main),
-            var(--bg-secondary)
-        );
+        #020B1A;
 }
 .hero-background {
     position: absolute;
     inset: 0;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.23;
-    filter: saturate(0.7);
+    pointer-events: none;
     z-index: 0;
+    opacity: 0.72;
+    background-image:
+        linear-gradient(rgba(0, 91, 149, 0.24) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 91, 149, 0.24) 1px, transparent 1px),
+        radial-gradient(ellipse at 72% 42%, rgba(0, 184, 217, 0.15), transparent 48%);
+    background-size:
+        56px 56px,
+        56px 56px,
+        100% 100%;
+    background-position:
+        center center,
+        center center,
+        center center;
+    mask-image: radial-gradient(ellipse at center, #000 34%, rgba(0, 0, 0, 0.82) 62%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 34%, rgba(0, 0, 0, 0.82) 62%, transparent 100%);
+    animation: hero-grid-drift 34s ease-in-out infinite alternate;
 }
 .hero-overlay {
     position: absolute;
     inset: 0;
+    pointer-events: none;
     background:
         linear-gradient(
             90deg,
-            var(--bg-main) 5%,
-            rgba(2, 9, 15, 0.82) 48%,
-            rgba(2, 9, 15, 0.35) 100%
+            rgba(2, 11, 26, 0.82) 0%,
+            rgba(2, 11, 26, 0.48) 48%,
+            rgba(2, 11, 26, 0.18) 100%
         );
     z-index: 1;
+}
+@keyframes hero-grid-drift {
+    from {
+        background-position: center center, center center, 68% 42%;
+    }
+    to {
+        background-position: 12px 8px, 12px 8px, 72% 46%;
+    }
 }
 .hero-content {
     position: relative;

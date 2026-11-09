@@ -1901,3 +1901,9 @@ section {
     .skill-category-card { width: 100%; }
     .technology-badge { max-width: 100%; }
 }
+
+/* Preserve original brand colors for social contact marks */
+.contact-icon img { filter: none; }
+.contact-icon img.contact-email-icon {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(83%) saturate(1800%) hue-rotate(145deg) brightness(103%) contrast(103%);
+}

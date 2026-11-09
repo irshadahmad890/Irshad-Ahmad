@@ -73,10 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ".section-title, " +
         ".about-content, " +
         ".service-card, " +
+        ".skill-group, " +
         ".skill-card, " +
         ".project-card, " +
         ".timeline-item, " +
-        ".contact-content, " +
+        ".contact-centered, " +
         ".contact-form"
     );
     animatedElements.forEach(element => {
@@ -100,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     const cardGroups = [
         ".service-card",
+        ".skill-group",
         ".skill-card",
         ".project-card",
         ".timeline-item"

@@ -1625,7 +1625,7 @@ section {
         background: rgba(8, 18, 25, 0.98);
         box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
     }
-    .nav-menu.open { display: flex; }
+    .nav-menu.mobile-open { display: flex; }
     .nav-link { padding: 10px 8px; font-size: 13px; }
     .nav-link.active::after { display: none; }
     .nav-actions { display: none; }
